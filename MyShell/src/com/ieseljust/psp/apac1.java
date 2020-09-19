@@ -186,7 +186,7 @@ public class apac1 {
 
 
 
-        processBuilder.command("bash", "-cl", bashscript.toString() + "  >resultado.log  2> errores.logb && cat errores.log | cat resultado.log");
+        processBuilder.command("bash", "-cl", bashscript.toString() + "  >resultado.log  2> errores.log && cat errores.log | cat resultado.log");
 
 
 
