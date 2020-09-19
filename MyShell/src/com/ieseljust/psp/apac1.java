@@ -68,8 +68,6 @@ public class apac1 {
 
         System.out.print("\033[H\033[2J");
 
-        Runtime.getRuntime().exec("clear");
-
         System.out.print("\u001B[0m");
 
         if (comando.equals("QUIT")) {
@@ -89,6 +87,8 @@ public class apac1 {
           bashscript += valor + "";
 
         }
+
+        System.out.println("\u001B[0m # MyShell>" + bashscript.toString());
 
         System.out.println(" \u001B[0m  # Eixida : \u001B[0m \u001B[32m");
 
