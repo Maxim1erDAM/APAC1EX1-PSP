@@ -48,6 +48,12 @@ public class apac1 {
 
       try {
 
+        ProcessBuilder processBuilder = new ProcessBuilder();
+
+        ArrayList < String > script = new ArrayList < String > ();
+
+        String comando = "";
+
         System.out.println("\u001B[34m#Introducir QUIT o CTRL+C para salir. ");
 
         System.out.println("\u001B[34m#APAC1 -PSP- Exercici 1. MyShell.");
@@ -57,12 +63,6 @@ public class apac1 {
         System.out.println("");
 
         System.out.print("\u001B[0m # MyShell>");
-
-        ProcessBuilder processBuilder = new ProcessBuilder();
-
-        ArrayList < String > script = new ArrayList < String > ();
-
-        String comando = "";
 
         comando += sc.nextLine();
 
@@ -92,7 +92,7 @@ public class apac1 {
 
         System.out.println(" \u001B[0m  # Eixida : \u001B[0m \u001B[32m");
 
-        processBuilder.command("bash", "-cl", bashscript.toString() + "  >resultado.log  2> errores.log && cat errores.log | cat resultado.log");
+        processBuilder.command("bash", "-cl", bashscript.toString() + "  1>resultado.log  2> errores.log && cat errores.log | cat resultado.log");
 
         Process process = processBuilder.start();
 
